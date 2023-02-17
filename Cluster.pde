@@ -19,31 +19,3 @@ public void mousePressed(){
   h = 0;
   Tendron(0, 0);
 }
-
-//7 splits
-float h = 0;
-public void Tendron(float x, float y){
-  if(y < -500)
-    return;
-  else{
-    h = h + 1;
-    float x1 = x + (float)(Math.random()*30 + 30);
-    float y1 = y - (float)(Math.pow((Math.random()*5 + 5), 2)) - h;
-    
-    noFill();
-    beginShape();
-    curveVertex(x, y);
-    curveVertex(x, y);
-    curveVertex(x1, y1);
-    curveVertex(x1, y1);
-    endShape();
-    Tendron(x1, y1);
-    Tendron(x1, y1);
-    Tendron(x1, y1);
-    Tendron(x1, y1);
-    Tendron(x1, y1);
-    Tendron(x1, y1);
-    Tendron(x1, y1);
-    Tendron(x1, y1);
-  }
-}
